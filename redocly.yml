@@ -1,0 +1,19 @@
+organization: myre
+
+extends:
+  - recommended
+
+rules:
+  info-license: warn
+  operation-2xx-response: error
+  operation-4xx-response: error
+  operation-operationId: error
+  operation-summary: error
+  paths-kebab-case: error
+
+  assert/schema-name:
+    subject:
+      type: NamedSchemas
+    assertions:
+      notPattern: /Dao$|Entity$/
+    message: Schema name should not end with "Dao" or "Entity"
