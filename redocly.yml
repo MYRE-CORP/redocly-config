@@ -15,5 +15,5 @@ rules:
     subject:
       type: NamedSchemas
     assertions:
-      notPattern: /Dao$|Entity$/
-    message: Schema name should not end with "Dao" or "Entity"
+      notPattern: /Dao$|Entity$|/Cv$|/CV$
+    message: Schema name should not end with "Dao", "Cv" nor "Entity"
